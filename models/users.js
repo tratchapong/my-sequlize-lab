@@ -16,5 +16,10 @@ getOne = (i) => {
   return data[i-1]
 }
 
-module.exports = {getAll, getOne}
+findName = (n) => {
+  // console.log(data.filter( x=> x.name.includes(n)))
+  return data.filter( x=> x.name.includes(n) )
+}
+
+module.exports = {getAll, getOne, findName}
 

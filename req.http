@@ -1,7 +1,10 @@
+get http://localhost:8000/users/findname?name=KL
 
-get http://localhost:8000/users/getone/3
+get http://localhost:8000/users/3
 
-get http://localhost:8000/users/getAll 
+# get http://localhost:8000/users/getone/3
+
+# get http://localhost:8000/users/getAll 
 
 get http://localhost:8000/users 
 

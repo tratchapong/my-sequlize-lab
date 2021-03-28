@@ -1,24 +1,17 @@
 const users = require('../models/users')
 
-exports.hello = (req, res, next) => {
-  // const {name, age} = req.query
-  console.log(req.query)
-  res.status(200).json(req.query)
-}
-
 exports.getAll = (req, res, next) => {
-  let result = users.getAll()
-  console.log(result)
-  res.status(200).json(result)
+  res.status(200).json(users.getAll())
 }
 
 exports.getOne = (req, res, next) => {
   let {id} = req.params
-  let result = users.getOne(id)
-  res.status(200).json(result)
+  res.status(200).json(users.getOne(id))
 }
 
-// exports.getOne = (req, res, next) => {
-//   let {id} = req.params
-//   res.status(200).json(users.getOne(id))
-// }
+exports.findName = (req, res, next) => {
+  // console.log(req.query)
+  let {name} = req.query
+  let result = users.findName(name)
+  res.status(200).json(result)
+}

@@ -6,20 +6,28 @@ const data = [
   { name : 'MNO', age: 22},
 ]
 
-getAll = () => {
+const getAll = () => {
   return data
 }
 
-getOne = (i) => {
+const getOne = (i) => {
   if (i > data.length) return { err : `not more than : ${data.length}` }
   if (data[i-1] === undefined) return { err : "Not found!!!" }
   return data[i-1]
 }
 
-findName = (n) => {
+const findName = (n) => {
   // console.log(data.filter( x=> x.name.includes(n)))
   return data.filter( x=> x.name.includes(n) )
 }
 
-module.exports = {getAll, getOne, findName}
+const create = (newOne) => {
+  return data.push(newOne)
+}
+
+const deleteOne = (i) => {
+  return data.splice(i-1, 1)
+}
+
+module.exports = {getAll, getOne, findName, create, deleteOne}
 

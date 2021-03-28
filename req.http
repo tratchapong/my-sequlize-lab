@@ -1,11 +1,17 @@
-get http://localhost:8000/users/findname?name=KL
+# post http://localhost:8000/users HTTP/1.1
+# content-type: application/json
 
-get http://localhost:8000/users/3
+# {
+#     "name": "Andy",
+#     "age": 30
+# }
 
-# get http://localhost:8000/users/getone/3
+# get http://localhost:8000/users/findname?name=KL
 
-# get http://localhost:8000/users/getAll 
+# get http://localhost:8000/users/3
 
-get http://localhost:8000/users 
+# get http://localhost:8000/users 
 
-get http://localhost:8000/users/hello?name=RT&age=20
+# get http://localhost:8000/users/hello?name=RT&age=20
+
+# delete http://localhost:8000/users/3
